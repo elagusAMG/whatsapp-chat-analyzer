@@ -9,7 +9,6 @@ def create_dataframe():
       chat_data = f.readlines()
 
   # Define regular expressions to extract data
-  # message_regex = re.compile(r'\[(\d{2}/\d{2}/\d{4}, \d{2}:\d{2}:\d{2})\] (\w+): (.+)')
   message_regex = re.compile(r'\[(\d{2}/\d{2}/\d{4}, \d{2}:\d{2}:\d{2})\] (.*?): (.+)')
   system_message_regex = re.compile(r'\[(\d{2}/\d{2}/\d{4}, \d{2}:\d{2}:\d{2})\] Baile Balersón: ‎(.+)')
   media_message_regex = re.compile(r'\[(\d{2}/\d{2}/\d{4}, \d{2}:\d{2}:\d{2})\] (.*?): (?:image|video|sticker) omitted')
