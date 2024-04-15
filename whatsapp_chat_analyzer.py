@@ -20,22 +20,13 @@ def main():
         $ python3 whatsapp_chat_analyzer.py
     """
     df = create_dataframe()
-    stats = simple_stats(df)
-    # print(stats)
+    # print(simple_stats(df))
+
     # world_cloud(df)
-    # print(df)
-    # most active
-    #
-    # Extract the hour from the time column
-    df["hour"] = df["time"].str.split(":", expand=True)[0]
-    # Plot the most active hours
-    # plt.figure(figsize=[10, 8])
-    # sns.barplot(x='count', y='hours', data=df['hour'].value_counts().rename_axis('hours').to_frame('count'), color='#F0D653')
-    # plt.title('Most Active hours')
-    # plt.xlabel('Number of Messages')
-    # plt.ylabel('Hour')
-    # plt.show()
-    messages_per_month_over_years(df)
+
+    # most_active_hours(df)
+
+    # messages_per_month_over_years(df)
 
 
 if __name__ == "__main__":

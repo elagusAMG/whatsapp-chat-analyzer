@@ -1,7 +1,6 @@
 import pandas as pd
 import plotly.express as px
 
-
 def messages_per_month_over_years(df):
     date_df = df.groupby("date").size().reset_index(name="total_messages")
     # Converting 'date' column to datetime format
